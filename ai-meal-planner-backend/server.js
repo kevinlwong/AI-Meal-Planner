@@ -15,15 +15,15 @@ connectDB();
 // Allow requests from the local frontend
 // CORS configuration
 app.use(
-    cors({
-        origin: [
-            "http://localhost:3000", // For local development
-            "https://your-frontend-domain.com", // Deployed frontend domain
-        ],
-        methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
-        allowedHeaders: ["Content-Type"], // Allowed headers
-        credentials: true, // Allow credentials if needed
-    })
+  cors({
+    origin: [
+      "http://localhost:3000", // For local development
+      "https://meal-planner-frontend-qusb.onrender.com", // Deployed frontend domain
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+    allowedHeaders: ["Content-Type"], // Allowed headers
+    credentials: true, // Allow credentials if needed
+  })
 );
 app.options("*", cors());
 
@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 
 // Your routes here
 app.get("/", (req, res) => {
-    res.send("CORS is configured properly!");
+  res.send("CORS is configured properly!");
 });
 
 const PORT = process.env.PORT || 5000;
