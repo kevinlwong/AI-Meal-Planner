@@ -1,7 +1,3 @@
-Here’s a detailed `README.md` file for your AI Meal Planner project, structured for GitHub:
-
----
-
 # **AI Meal Planner**
 
 ## **Overview**
@@ -48,13 +44,13 @@ Ensure the following are installed on your system:
 
 ### **Backend Setup**
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/yourusername/ai-meal-planner.git
    cd ai-meal-planner/ai-meal-planner-backend
    ```
 
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 
@@ -66,23 +62,23 @@ Ensure the following are installed on your system:
    ```
 
 4. Start the backend server:
-   ```bash
+   ```
    npm start
    ```
 
 ### **Frontend Setup**
 1. Navigate to the frontend folder:
-   ```bash
+   ```
    cd ../frontend
    ```
 
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 
 3. Start the React development server:
-   ```bash
+   ```
    npm start
    ```
 
@@ -115,9 +111,11 @@ ai-meal-planner/
 │   │   └── mealController.js    # Handles AI meal plan generation
 │   ├── models/
 │   │   └── MealPlan.js          # Mongoose schema for meal plans
+|   |   └── UserInput.js          # Mongoose schema for user input
 │   ├── routes/
 │   │   ├── mealRoutes.js        # Routes for generating meal plans
 │   │   └── mealPlanRoutes.js    # Routes for saving and retrieving meal plans
+│   │   └── userInputRoutes.js    # Routes for saving and retrieving user input
 │   ├── server.js                # Express server entry point
 │   └── .env                     # Environment variables (ignored in Git)
 ├── frontend/
