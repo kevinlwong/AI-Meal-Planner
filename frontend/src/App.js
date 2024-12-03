@@ -59,9 +59,9 @@ function App() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-            <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
-                <h1 className="text-2xl font-bold mb-6 text-gray-700">
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+            <div className="bg-gray-600 shadow-lg rounded-lg p-8 max-w-md w-full">
+                <h1 className="text-2xl font-bold mb-6 text-gray-300">
                     Kevin Wong's AI Meal Planner
                 </h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -107,10 +107,10 @@ function App() {
 
                 {mealPlan && (
                     <div className="mt-6">
-                        <h2 className="text-xl font-bold mb-2 text-gray-700">
+                        <h2 className="text-xl font-bold mb-2 text-gray-300">
                             Your Meal Plan:
                         </h2>
-                        <p className="text-gray-600 whitespace-pre-wrap">{mealPlan}</p>
+                        <p className="text-gray-300 whitespace-pre-wrap">{mealPlan}</p>
                     </div>
                 )}
             </div>

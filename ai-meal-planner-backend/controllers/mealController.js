@@ -1,4 +1,4 @@
-"use server";
+// "use server";
 const OpenAI = require("openai");
 require("dotenv").config();
 
@@ -36,14 +36,10 @@ const generateMealPlan = async (req, res) => {
 
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo", // Replace with "gpt-4" if you have access
+      model: "gpt-4o-mini", // Replace with "gpt-4" once we have access
       messages: messages,
       max_tokens: 300,
     });
-
-    // Extract the meal plan text from the response
-    // const mealPlanText = response.data.choices[0].message.content;
-    // return parseMealPlan(mealPlanText); // Optional: convert text to structured JSON
 
     res
       .status(200)
