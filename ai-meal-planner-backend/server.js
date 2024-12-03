@@ -13,13 +13,19 @@ connectDB();
 
 // app.use(cors());
 // Allow requests from the local frontend
+// CORS configuration
 app.use(
-  cors({
-    origin: ["http://localhost:3000", "https://your-frontend-on-render.com"], // Add all frontend origins here
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-    credentials: true, // Allow cookies if needed
-  })
+    cors({
+        origin: [
+            "http://localhost:3000", // For local development
+            "https://your-frontend-domain.com", // Deployed frontend domain
+        ],
+        methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+        allowedHeaders: ["Content-Type"], // Allowed headers
+        credentials: true, // Allow credentials if needed
+    })
 );
+app.options("*", cors());
 
 app.use(express.json());
 
@@ -42,6 +48,11 @@ app.get("/api/test", async (req, res) => {
 app.use((req, res, next) => {
   console.log(`Received request: ${req.method} ${req.url}`);
   next();
+});
+
+// Your routes here
+app.get("/", (req, res) => {
+    res.send("CORS is configured properly!");
 });
 
 const PORT = process.env.PORT || 5000;
