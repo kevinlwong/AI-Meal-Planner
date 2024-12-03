@@ -14,7 +14,7 @@ function App() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:5000/api/meals/generate', {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/meals/generate`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function App() {
     
             console.log("Save Request Payload:", savePayload); // Debug save payload
             
-            const saveResponse = await fetch("http://localhost:5000/api/mealplans/save", {
+            const saveResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/mealplans/save`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
