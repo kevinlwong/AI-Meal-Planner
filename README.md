@@ -93,11 +93,6 @@ Ensure the following are installed on your system:
 
 2. **Save the Plan**:
    - The meal plan is automatically saved to MongoDB after generation.
-   - Users are notified with a success message.
-
-3. **Retrieve Past Plans**:
-   - Click **"View Past Meal Plans"** to see a list of previously generated and saved plans.
-   - Plans are displayed in a user-friendly format.
 
 ---
 
@@ -173,25 +168,6 @@ ai-meal-planner/
     }
   }
   ```
-
-### **Retrieve Past Meal Plans**
-**GET** `/api/mealplans/get-all`
-- **Response**:
-  ```json
-  [
-    {
-      "_id": "64fbbb34...",
-      "preferences": "keto",
-      "budget": 50,
-      "skill": "beginner",
-      "time": 30,
-      "mealPlan": {...}
-    },
-    ...
-  ]
-  ```
-
----
 
 ## **Future Improvements**
 - Add user authentication to associate meal plans with specific users.
