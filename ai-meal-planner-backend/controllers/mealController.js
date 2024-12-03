@@ -29,7 +29,7 @@ const generateMealPlan = async (req, res) => {
         Respond in an easy to read format that begins with
         "Here is a 3-day meal plan for a (Dietary Preference) with a/an (skill) skill level, looking to budget $(budget) for 3 days of (time)-minute meals:"
         Also please do not use ** or any other markdown syntax. It should only consist of the Day, the indented list of meals with a dash before them for that day, and the total cost for that day in parentheses with $ before the number. Also the total for each day and the total for all three days at the end.
-        If the budget is relatively high (over $50), you can include more expensive ingredients. If the budget is low, you should include cheaper ingredients. If the skill is high, you can include more complex recipes. If the skill is low, you should include simpler recipes.
+        If the budget is relatively high (over $50), you can include more expensive ingredients, but the overall total for the 3 days should be less than or equal to the (budget). If the budget is low, you should include cheaper ingredients. If the skill is high, you can include more complex recipes. If the skill is low, you should include simpler recipes.
         `,
     },
   ];
