@@ -10,6 +10,7 @@ function App() {
     });
 
     // Handle form submission
+    // https://meal-planner-backend-092b.onrender.com/api/meals/generate
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -35,15 +36,15 @@ function App() {
     
             console.log("Save Request Payload:", savePayload); // Debug save payload
             
-            const saveResponse = await fetch("https://meal-planner-backend-092b.onrender.com/api/mealplans/save", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(savePayload),
-            });
-            const savedData = await saveResponse.json();
-            console.log("Saved Meal Plan:", savedData);
+            // const saveResponse = await fetch("https://meal-planner-backend-092b.onrender.com/api/mealplans/save", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify(savePayload),
+            // });
+            // const savedData = await saveResponse.json();
+            // console.log("Saved Meal Plan:", savedData);
 
             setMealPlan(data.mealPlan);
             // alert("Meal plan saved successfully!");
