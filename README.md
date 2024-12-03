@@ -1,4 +1,4 @@
-# **AI Meal Planner** :poultry_leg::cut_of_meat::meat_on_bone:
+# **AI Meal Planner** :poultry_leg::broccoli::cut_of_meat::leafy_green::meat_on_bone::rice:
 
 ## **Overview**
 AI Meal Planner is a web application that generates personalized meal plans based on user preferences, budget, cooking skill level, and time constraints. The app integrates OpenAI’s GPT API to dynamically create meal plans and allows users to save and retrieve their plans using MongoDB.
