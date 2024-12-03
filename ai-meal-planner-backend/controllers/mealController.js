@@ -36,7 +36,7 @@ const generateMealPlan = async (req, res) => {
 
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // Replace with "gpt-4" once we have access
+      model: "gpt-3", // Replace with "gpt-4" once we have access
       messages: messages,
       max_tokens: 300,
     });
