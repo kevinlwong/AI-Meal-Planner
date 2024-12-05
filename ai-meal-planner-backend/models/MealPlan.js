@@ -5,6 +5,7 @@ const mealPlanSchema = new mongoose.Schema({
     budget: { type: Number, required: true },
     skill: { type: String, required: true },
     time: { type: Number, required: true },
+    days: { type: Number, required: true },
      mealPlan: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
 });

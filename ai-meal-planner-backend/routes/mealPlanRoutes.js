@@ -5,11 +5,11 @@ const router = express.Router();
 
 // POST route to save the meal plan
 router.post("/save", async (req, res) => {
-    const { preferences, budget, skill, time, mealPlan } = req.body;
+    const { preferences, budget, skill, time, days, mealPlan } = req.body;
 
     try {
         // Validate required fields
-        if (!preferences || !budget || !skill || !time || !mealPlan) {
+        if (!preferences || !budget || !skill || !time || !days || !mealPlan) {
             return res.status(400).json({ message: "All fields are required." });
         }
 
@@ -19,6 +19,7 @@ router.post("/save", async (req, res) => {
             budget,
             skill,
             time,
+            days,
             mealPlan,
         });
 

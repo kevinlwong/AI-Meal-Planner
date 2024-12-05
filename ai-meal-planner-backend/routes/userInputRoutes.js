@@ -5,16 +5,16 @@ const router = express.Router();
 
 // POST route to save user input
 router.post("/save", async (req, res) => {
-    const { preferences, budget, skill, time } = req.body;
+    const { preferences, budget, skill, time, days } = req.body;
 
     try {
         // Validate that required fields are provided
-        if (!preferences || !budget || !skill || !time) {
+        if (!preferences || !budget || !skill || !time || !days) {
             return res.status(400).json({ message: "All fields are required." });
         }
 
         // Create a new UserInput document
-        const userInput = new UserInput({ preferences, budget, skill, time });
+        const userInput = new UserInput({ preferences, budget, skill, time, days });
 
         // Save to the database
         const savedInput = await userInput.save();
