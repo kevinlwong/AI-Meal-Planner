@@ -134,6 +134,54 @@ function App() {
             <p className="text-gray-300 whitespace-pre-wrap">{mealPlan}</p>
           </div>
         )}
+
+
+
+
+        <p className="text-center text-gray-300 mt-8">
+          Made by {""}
+          <a
+            href="https://kevinlwong.github.io/KevinLWong-Portfolio/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-yellow-600"
+          >
+            Kevin Wong
+          </a>
+        </p>
+        <p className="text-center text-gray-300 mt-2">
+          {""}
+          <a
+            href="https://www.linkedin.com/in/kevinlwong88/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-yellow-600"
+          >
+            LinkedIn
+          </a>
+        </p>
+        <p className="text-center text-gray-300 mt-2">
+          {""}
+          <a
+            href="https://github.com/kevinlwong"
+            target="_blank"
+            rel="noreferrer"
+            className="text-yellow-600"
+          >
+            Github
+          </a>
+        </p>
+        <p className="text-center text-gray-300 mt-2">
+          Feel free to fork this {""}
+          <a
+            href="https://github.com/kevinlwong/AI-Meal-Planner"
+            target="_blank"
+            rel="noreferrer"
+            className="text-yellow-600"
+          >
+            repository
+          </a>
+        </p>
       </div>
     </div>
   );
