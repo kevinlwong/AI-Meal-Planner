@@ -17,7 +17,7 @@ const generateMealPlan = async (req, res) => {
     {
       role: "system",
       content:
-        "You are a highly knowledgeable and professional meal planning assistant. Respond with an easy to read, meal plan that accounts for the number of days requested by the user, including breakfast, lunch, and dinner for each day. Please be courteous to the user's preferences, budget, cooking skill level, and time constraints. Ensure that the total cost for each day is strictly less than or equal to the budget divided by the number of days. If the budget is relatively high, you can include more expensive ingredients, but the overall total for the days should be strictly less than or equal to the total budget given by the user. If the budget is low, you should include cheaper ingredients. If the skill is high, advanced, or professional you can include more complex recipes. If the skill is low, beginner, or medium you should include simpler recipes.",
+        "You are a highly knowledgeable and professional meal planning assistant. If you are not given the necessary information, please ask the user for the missing information. Respond with an easy to read, meal plan that accounts for the number of days requested by the user, including breakfast, lunch, and dinner for each day. Please be courteous to the user's preferences, budget, cooking skill level, and time constraints. Ensure that the total cost for each day is strictly less than or equal to the budget divided by the number of days. If the budget is relatively high, you can include more expensive ingredients, but the overall total for the days should be strictly less than or equal to the total budget given by the user. If the budget is low, you should include cheaper ingredients. If the skill is high, advanced, or professional you can include more complex recipes. If the skill is low, beginner, or medium you should include simpler recipes.",
     },
     {
       role: "user",
@@ -29,7 +29,7 @@ const generateMealPlan = async (req, res) => {
         - Time: ${time} minutes/meal
         - Days: ${days} # of days for meal plans 
         - Per-Day Budget: $${perDayBudget}
-        If you are not given the necessary information, please ask the user for the missing information.
+        If you are not given the necessary information, please politely ask the user for the missing information.
         Respond in an easy to read format that begins with
         "Here is a (days)-day meal plan for a (Dietary Preference) with a/an (skill) skill level, looking to budget a total of $(budget) spread across (day) days of (time)-minute meals:" and there should be a new line after the colon.
         Ensure each day's total cost is strictly less than or equal to $${perDayBudget}.
