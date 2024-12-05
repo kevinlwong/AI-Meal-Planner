@@ -10,6 +10,7 @@ const openai = new OpenAI({
 // Generate Meal Plan
 const generateMealPlan = async (req, res) => {
   const { preferences, budget, skill, time, days } = req.body;
+
   const perDayBudget = budget / days;
   // Construct the prompt for chat-based models
   const messages = [
@@ -28,6 +29,7 @@ const generateMealPlan = async (req, res) => {
         - Time: ${time} minutes/meal
         - Days: ${days} # of days for meal plans 
         - Per-Day Budget: $${perDayBudget}
+        If you are not given the necessary information, please ask the user for the missing information.
         Respond in an easy to read format that begins with
         "Here is a (days)-day meal plan for a (Dietary Preference) with a/an (skill) skill level, looking to budget a total of $(budget) spread across (day) days of (time)-minute meals:" and there should be a new line after the colon.
         Ensure each day's total cost is strictly less than or equal to $${perDayBudget}.
